@@ -94,6 +94,9 @@ public class TataSkyRemote extends Remote {
                 case Keys.BACK:
                     keyCodes[i] = new int[]{37000, 97, 32, 16, 16, 16, 16, 16, 32, 16, 32, 31, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 32, 31, 16, 16, 16, 16, 16, 16, 16, 16, 31, 15, 16, 3700};
                     break;
+                case Keys.TV_POWER:
+                    keyCodes[i] = new int[]{38000, 34, 34, 34, 34, 67, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 67, 34, 34, 67, 34, 34, 3556};
+                    break;
 
             }
             /*Convert keycode into ms*/

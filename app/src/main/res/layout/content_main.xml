@@ -26,8 +26,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guide"
-        android:layout_below="@+id/power"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBaseline="@+id/chdown"
+        android:layout_alignBottom="@+id/chdown"
+        android:layout_toStartOf="@+id/up" />
+
+    <Button
+        android:id="@+id/tvon"
+        android:onClick="buttonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvon"
+        android:layout_alignTop="@+id/power"
+        android:layout_toStartOf="@+id/up" />
 
     <Button
         android:id="@+id/chup"
@@ -44,9 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ch-"
-        android:layout_above="@+id/right"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="42dp" />
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/up"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/up"

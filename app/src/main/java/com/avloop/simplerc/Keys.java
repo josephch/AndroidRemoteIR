@@ -39,6 +39,7 @@ public class Keys {
     public static final int CHUP = 15;
     public static final int CHDOWN = 16;
     public static final int BACK = 17;
-    public static final int MAX_KEYS =18;
+    public static final int TV_POWER = 18;
+    public static final int MAX_KEYS =19;
 
 }

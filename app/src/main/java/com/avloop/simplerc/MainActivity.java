@@ -102,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.pause:
                 keyCode = Keys.PAUSE;
                 break;
+            case R.id.tvon:
+                keyCode = Keys.TV_POWER;
+                break;
             default:
                 break;
         }
