@@ -26,6 +26,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.avloop.simplerc.remotes.Remote;
 import com.avloop.simplerc.remotes.TataSkyRemote;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, "mCIR.hasIrEmitter(): " + mCIR.hasIrEmitter());
         }
         setContentView(R.layout.activity_main);
-
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         remote = new TataSkyRemote(mCIR);
 
         /*Button fab = (Button) findViewById(R.id.power);
