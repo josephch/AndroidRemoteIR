@@ -105,11 +105,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.tvon:
                 keyCode = Keys.TV_POWER;
                 break;
+            case R.id.planner:
+                keyCode = Keys.PLANNER;
+                break;
+            case R.id.record:
+                keyCode = Keys.REC;
+                break;
             default:
+                Log.w(TAG, "Not supported button");
                 break;
         }
         if ( keyCode != -1) {
             remote.sentIR(keyCode);
+        }
+        else {
+            Log.w( TAG, "Not sending IR");
         }
     }
 }

@@ -31,6 +31,15 @@
         android:layout_toStartOf="@+id/up" />
 
     <Button
+        android:id="@+id/planner"
+        android:onClick="buttonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Planner"
+        android:layout_alignTop="@+id/guide"
+        android:layout_centerHorizontal="true" />
+
+    <Button
         android:id="@+id/tvon"
         android:onClick="buttonClicked"
         android:layout_width="wrap_content"
@@ -143,4 +152,13 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/down"
         android:layout_marginBottom="56dp" />
+
+    <Button
+        android:id="@+id/record"
+        android:onClick="buttonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record"
+        android:layout_above="@+id/play"
+        android:layout_alignStart="@+id/planner" />
 </RelativeLayout>
