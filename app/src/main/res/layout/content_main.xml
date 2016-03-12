@@ -26,8 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guide"
-        android:layout_alignBaseline="@+id/chdown"
-        android:layout_alignBottom="@+id/chdown"
+        android:layout_alignTop="@+id/chup"
         android:layout_toStartOf="@+id/up" />
 
     <Button
@@ -49,20 +48,20 @@
         android:layout_toStartOf="@+id/up" />
 
     <Button
-        android:id="@+id/chup"
-        android:onClick="buttonClicked"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ch+"
-        android:layout_below="@+id/guide"
-        android:layout_alignStart="@+id/chdown" />
-
-    <Button
         android:id="@+id/chdown"
         android:onClick="buttonClicked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ch-"
+        android:layout_below="@+id/guide"
+        android:layout_alignStart="@+id/chup" />
+
+    <Button
+        android:id="@+id/chup"
+        android:onClick="buttonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ch+"
         android:layout_marginBottom="40dp"
         android:layout_above="@+id/up"
         android:layout_alignParentEnd="true" />
