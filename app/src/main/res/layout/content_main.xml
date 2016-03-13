@@ -10,8 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#99000000"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.avloop.simplerc.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.avloop.simplerc.MainActivity">
     <Button android:id="@+id/power"
         android:onClick="buttonClicked"
         android:layout_width="wrap_content"

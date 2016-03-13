@@ -23,6 +23,11 @@ package com.avloop.simplerc;
 import android.hardware.ConsumerIrManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -46,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         remote = new TataSkyRemote(mCIR);
 
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+
+
+        viewPager.setAdapter(new SectionPagerAdapter(getSupportFragmentManager()));
+        tabLayout.setupWithViewPager(viewPager);
+
         /*Button fab = (Button) findViewById(R.id.power);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,11 +68,44 @@ public class MainActivity extends AppCompatActivity {
         });
         */
     }
+    class SectionPagerAdapter extends FragmentPagerAdapter {
 
+        public SectionPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new FragmentMain();
+                case 1:
+                default:
+                    return new NumberAndColorsFragment();
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 2;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return "Main";
+                case 1:
+                default:
+                    return "Num/Col";
+            }
+        }
+    }
     public void buttonClicked( View view) {
         int id = view.getId();
         int keyCode = -1;
         switch (id) {
+            /*Main keys*/
             case R.id.power:
                 keyCode = Keys.POWER;
                 break;
@@ -117,8 +163,53 @@ public class MainActivity extends AppCompatActivity {
             case R.id.info:
                 keyCode = Keys.INFO;
                 break;
+
+            /*Numbers*/
+            case R.id.no0:
+                keyCode = 0;
+                break;
+            case R.id.no1:
+                keyCode = 1;
+                break;
+            case R.id.no2:
+                keyCode = 2;
+                break;
+            case R.id.no3:
+                keyCode = 3;
+                break;
+            case R.id.no4:
+                keyCode = 4;
+                break;
+            case R.id.no5:
+                keyCode = 5;
+                break;
+            case R.id.no6:
+                keyCode = 6;
+                break;
+            case R.id.no7:
+                keyCode = 7;
+                break;
+            case R.id.no8:
+                keyCode = 8;
+                break;
+            case R.id.no9:
+                keyCode = 9;
+                break;
+            /*Color keys*/
+            case R.id.red:
+                keyCode = Keys.RED;
+                break;
+            case R.id.green:
+                keyCode = Keys.GREEN;
+                break;
+            case R.id.blue:
+                keyCode = Keys.BLUE;
+                break;
+            case R.id.yellow:
+                keyCode = Keys.YELLOW;
+                break;
             default:
-                Log.w(TAG, "Not supported button");
+                Log.w(TAG, "Not supported button :"+view);
                 break;
         }
         if ( keyCode != -1) {
