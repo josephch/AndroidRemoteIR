@@ -50,6 +50,15 @@
         android:layout_toStartOf="@+id/up" />
 
     <Button
+        android:id="@+id/livetv"
+        android:onClick="buttonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="livetv"
+        android:layout_above="@+id/chup"
+        android:layout_alignStart="@+id/planner" />
+
+    <Button
         android:id="@+id/chdown"
         android:onClick="buttonClicked"
         android:layout_width="wrap_content"
@@ -163,5 +172,14 @@
         android:text="record"
         android:layout_alignTop="@+id/play"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/info"
+        android:onClick="buttonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="info"
+        android:layout_alignTop="@+id/record"
+        android:layout_alignStart="@+id/pause" />
 
 </RelativeLayout>

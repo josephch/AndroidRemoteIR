@@ -111,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.record:
                 keyCode = Keys.REC;
                 break;
+            case R.id.livetv:
+                keyCode = Keys.LIVETV;
+                break;
+            case R.id.info:
+                keyCode = Keys.INFO;
+                break;
             default:
                 Log.w(TAG, "Not supported button");
                 break;

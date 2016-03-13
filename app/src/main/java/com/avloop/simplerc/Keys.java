@@ -22,7 +22,7 @@ package com.avloop.simplerc;
 
 public class Keys {
     public static final int POWER = 0;
-    public static final int TV = 1;
+    public static final int LIVETV = 1;
     public static final int INFO = 2;
     public static final int UP = 3;
     public static final int DOWN = 4;
